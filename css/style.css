@@ -1,0 +1,431 @@
+/* Color variables */
+:root {
+    --primary-background-color: #f2f0ed;
+    --text-color: #000000;
+    --button-background-color: #322147;
+    --button-text-color: #ebebeb;
+    --border-color: #000000;
+    --placeholder-color: #575757;
+    --form-shadow-color: rgba(8, 7, 16, 0.6);
+    --table-background-color: #f5f5f5;
+    --table-header-background-color: #191919;
+    --table-header-text-color: #fff;
+    --offline-user-color: #ffb2b2;
+    --online-user-color: #c3ffb2;
+}
+
+/* Global styling */
+/* Default styles for all screens */
+*, *:before {
+    padding: 5px;
+    margin: 0;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    *, *:before {
+        overflow-x: auto;
+    }
+    
+    .img img {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 300px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-background-color);
+    color: var(--text-color);
+}
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* Form styling */
+
+.formLogin {
+    height: 800px;
+    width: 700px;
+    background-color: var(--form-background-color);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px var(--form-shadow-color);
+    padding: 50px 35px;
+}
+
+.formLogin * {
+    letter-spacing: 0.5px;
+    outline: none;
+}
+
+.formLogin h3 {
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.labelPost {
+    display: block;
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.labelWelkom {
+    display: block;
+    margin-top: 30px;
+    font-size: 60px;
+    font-weight: 500;
+    overflow-y: hidden;
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    overflow-y: hidden;
+}
+
+.inputPost {
+    display: block;
+    height: 50px;
+    width: 96%;
+    background-color: var(--form-background-color);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+}
+
+.buttonSubmitPost {
+    margin-top: 50px;
+    width: 100%;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 40px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+}
+
+.buttonSubmitPost.narrow {
+    width: 49%;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+
+.tTitle {
+    font-size: 28px;
+    background: var(--table-header-background-color);
+    color: var(--table-header-text-color);
+    font-weight: unset;
+    text-align: left;
+}
+
+th {
+    font-size: 21px;
+    height: 60px;
+    background: var(--table-header-background-color);
+    color: var(--table-header-text-color);
+    font-weight: unset;
+}
+
+.offlineUser, .vlanMatch {
+    background-color: var(--offline-user-color) !important;
+}
+
+.onlineUser, .vlanNoMatch {
+    background-color: var(--online-user-color) !important;
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: 10px;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-background-color);
+}
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table-container table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-container table td, .table-container table th {
+    white-space: nowrap;
+}
+
+td {
+    font-size: 19px;
+    height: 50px;
+    text-align: center;
+}
+
+/* Navigation Style */
+.navButton {
+    position: relative;
+    background: var(--button-background-color);
+    width: 750px;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    font-size: 4.5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 5%;
+    color: var(--button-text-color);
+}
+
+.divNavButton {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.divNavButton .navButton {
+    border-radius: 16px;
+}
+
+/* image style */
+.img img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.img {
+    overflow-x: hidden;
+    padding: 0;
+    width: 40%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.svgBackground {
+    background-image: url(../img/cringe.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+}
+
+.dropdownMenu {
+    width: 50%;
+    font-size: 40px;
+    margin-left: 25%;
+}
+
+.updateCable {
+    margin-left: 25%;
+    width: 25%;
+}
+
+.formDropdown {
+    width: 50%;
+    font-size: 50px;
+    margin-left: 25%;
+}
+
+.px {
+    margin-left: 3px;
+}
+
+#searchInput {
+    margin-left: 25%;
+}
+
+.user2AddButton {
+    width: 50%;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.formDeleteButtons {
+    margin-bottom: 0;
+}
+
+.buttonOutsideTable {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+    margin: 5px 3px;
+    width: 25%;
+}
+
+.buttonOutsideTable2 {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+    margin: 5px 0px 5px 25%;
+    width: 25%;
+}
+
+.displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputTextField {
+    width: 25%;
+    font-size: 34px;
+}
+
+.displayFlex2 {
+    display: flex;
+    align-items: center;
+}
+
+.formDropdown2 {
+    width: 25%;
+    font-size: 35px;
+    margin-left: 25%;
+}
+
+.buttonOutsideTable3 {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+    margin: 5px 3px;
+    width: 16.6%;
+}
+
+.inputPost2 {
+    display: block;
+    height: 50px;
+    width: 50%;
+    background-color: var(--form-background-color);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.dropdownMenu2 {
+    width: 51%;
+    font-size: 40px;
+}
+
+.createForms {
+    width: 100%;
+    margin-left: 25%;
+}
+
+.createForms2 {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelPost2 {
+    display: block;
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 25%;
+}
+
+.createForms3 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
+
+.buttonOutsideTable4 {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 27px;
+    font-weight: 600;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--border-color);
+    cursor: pointer;
+    margin: 5px 3px;
+    width: 25%;
+}

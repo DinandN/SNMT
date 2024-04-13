@@ -1,0 +1,12 @@
+Options -Indexes
+
+ErrorDocument 403 http://10.99.98.23/
+ErrorDocument 404 http://10.99.98.23/
+
+# Rewrite URLs to hide specific directories
+RewriteEngine On
+
+# Rewrite requests for "include" directory to the root
+RewriteRule ^include/ - [R=404,L]
+
+
